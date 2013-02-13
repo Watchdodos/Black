@@ -3,11 +3,13 @@
 
 
 
-
-
-
 body {
 	padding-top: 60px;
+	background-color: #000000;
+}
+.container{
+	background-color: #000000;
+
 }
 
 .footer{
@@ -17,4 +19,75 @@ body {
 		color: $gray;
 	}
 }
+
+
+
+#top{
+	margin:0px auto;
+	width:196px;
+	
+	
+}
+
+#head {
+	background-color: #00ff00;
+	margin:0px auto;
+	width:196px;
+
+	
+		
+}
+
+#mid {
+	
+	width:588px;
+	margin:0px auto;
+	
+	}
+	
+#larm {
+	
+	 display:inline-block;
+	margin:0px auto;
+	
+}	
+
+
+#shirt{
+	background-color: #00ff00;
+	display:inline-block;
+	margin:0px -4px;
+	position:relative;
+		
+}
+
+#rarm {
+	
+	 display:inline-block;
+	 margin:0px auto;
+	
+}
+
+#bot {
+	margin:0px auto;
+	width:196px;	
+}
+
+#legs {
+	
+	 display:inline-block;
+	 margin:0px auto;
+	
+}
+
+/* Shirt controls */
+
+#shirt-color{
+	position:absolute;
+	bottom:10px;
+	left:85px;
+}
+
+
+
 

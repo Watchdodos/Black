@@ -1,16 +1,15 @@
 <div class="row">
-	<div class="span3">
+	<div class="span2">
 		<h1> left-main </h1>
 	</div>
 
-	<div class="span6">
-		<h1> Dolls </h1>
-		<%= render 'layouts/doll' %>
-		<%= link_to "Join now", new_user_registration_path , class: "btn btn-primary btn-small" %>
+	<div class="span8">
+	<%= render 'layouts/doll' %>
 	</div>
 
-	<div class="span3">
+	<div class="span2">
 		<h1>Pins</h1>
+		<%= link_to "Join now", new_user_registration_path , class: "btn btn-primary btn-small" %>
 	</div>
 </div>
 
