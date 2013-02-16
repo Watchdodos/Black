@@ -1,4 +1,7 @@
 Black::Application.routes.draw do
+  resources :dolls
+
+
   resources :pins
 
 
