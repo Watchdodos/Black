@@ -1,4 +1,6 @@
 class DollsController < ApplicationController
+    before_filter :authenticate_user!, except: [:index,:show]
+
   # GET /dolls
   # GET /dolls.json
   def index
@@ -24,7 +26,7 @@ class DollsController < ApplicationController
   # GET /dolls/new
   # GET /dolls/new.json
   def new
-    @doll = Doll.new
+    @doll = current_user.dolls.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +36,13 @@ class DollsController < ApplicationController
 
   # GET /dolls/1/edit
   def edit
-    @doll = Doll.find(params[:id])
+    @doll = current_user.dolls.find(params[:id])
   end
 
   # POST /dolls
   # POST /dolls.json
   def create
-    @doll = Doll.new(params[:doll])
+    @doll = current_user.dolls.new(params[:doll])
 
     respond_to do |format|
       if @doll.save
@@ -56,7 +58,7 @@ class DollsController < ApplicationController
   # PUT /dolls/1
   # PUT /dolls/1.json
   def update
-    @doll = Doll.find(params[:id])
+    @doll = current_user.dolls.find(params[:id])
 
     respond_to do |format|
       if @doll.update_attributes(params[:doll])
@@ -72,7 +74,7 @@ class DollsController < ApplicationController
   # DELETE /dolls/1
   # DELETE /dolls/1.json
   def destroy
-    @doll = Doll.find(params[:id])
+    @doll = current_user.dolls.find(params[:id])
     @doll.destroy
 
     respond_to do |format|
