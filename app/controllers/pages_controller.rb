@@ -1,8 +1,12 @@
-class PagesController  < ApplicationController 
+class PagesController  < ApplicationController
   def home
+    @doll = Doll.new
   end
 
-def action
+  def about
 
+  end
+
+  def action
   end
 end
