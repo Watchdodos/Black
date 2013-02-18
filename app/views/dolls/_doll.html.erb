@@ -3,8 +3,6 @@
       <td><%= doll.city %></td>
       <td><%= doll.state %></td>
       <td><%= doll.tag %></td>
-      <td><%= doll.user %></td>
-
       <td><%= link_to 'Show', doll %></td>
       <% if current_user == doll.user %>
       <td><%= link_to 'Edit', edit_doll_path(doll) %></td>
