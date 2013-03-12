@@ -1,6 +1,47 @@
-about
+	<div class="aboutholder">
+	<%= image_tag "aboutholder.png" %>
+	</div>
 
-<%= render :partial => 'dolls/form', :locals => { :doll => @doll } %>
+<!-- THIS IS FOR LATER CHILL :D
 
 
-<%= link_to "new pin", new_pin_path %>
+		<div class="row">
+			
+			<div class="span8">
+
+			<%= render 'layouts/notdoll' %>
+				<div class="dollinfo">
+					<h1> Dollname Goeshere </h1>
+						<h5> Cityhere :: Statehere </h5>
+						<h6> tages can go here </h6>
+				</div>
+			</div>
+		<div class="span4">
+				<h1> left-main </h1>
+
+				<%= render :partial => 'dolls/form', :locals => { :doll => @doll } %>
+				<%= link_to "new pin", new_pin_path %>
+			</div>
+
+			
+		</div>
+
+-->
+
+
+
+<div class="row">
+	<div class="span8">
+		<%= render 'layouts/notdoll' %>
+		<div class="dollinfo">
+		<h1> Dollname Goeshere </h1>
+		<h5> Cityhere :: Statehere </h5>
+		<h6> tages can go here </h6>
+				</div>
+			</div>
+
+	<div class="span4">
+	<%= image_tag "pinbox.png" %>
+	<%= link_to "new pin", new_pin_path %>
+	</div>
+</div>

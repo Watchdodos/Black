@@ -1,0 +1,27 @@
+<div class="row">
+	<div class="span 8 offset2">
+		<div class="well">
+			<p>
+			  <b>Name:</b>
+			  <%= @doll.name %>
+			</p>
+			<p>
+			  <b>City:</b>
+			  <%= @doll.city %>
+			</p>
+
+			<p>
+			  <b>State:</b>
+			  <%= @doll.state %>
+			</p>
+
+			<p>
+			  <b>Tag:</b>
+			  <%= @doll.tag %>
+			</p>
+			<%= link_to 'Edit', edit_doll_path(@doll) %> |
+			<%= link_to 'Back', dolls_path %>
+
+		</div>
+
+		

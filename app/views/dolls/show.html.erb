@@ -1,27 +1,44 @@
 <div class="row">
-	<div class="span 8 offset2">
-		<div class="well">
-			<p>
-			  <b>Name:</b>
-			  <%= @doll.name %>
-			</p>
-			<p>
-			  <b>City:</b>
-			  <%= @doll.city %>
-			</p>
+	<div class="span8" id="dollbox">
+		<div class="dollwraper">
+			<div id="top">
+				<div id="head">
+				<%= image_tag "head.png" %>
+				</div>	
+			</div>
 
-			<p>
-			  <b>State:</b>
-			  <%= @doll.state %>
-			</p>
+			<div id="mid">
+				<div id="larm">
+				<%= image_tag "larm.png" %>
+				</div>
+				<div id="shirt">
+				<%= image_tag "shirt-test.png" %>
+					<div id="shirt-color"style="display:none;">
+					<a href="#" class="btn small" id="cp4" data-color-format="hex" data-color="rgb(255, 255, 255)">X</a>
+					</div>
+				</div>
+				<div id="rarm">
+				<%= image_tag "rarm.png" %> 
+				</div>    	
+			</div>
 
-			<p>
-			  <b>Tag:</b>
-			  <%= @doll.tag %>
-			</p>
+			<div id="bot">
+				<div id="legs">
+				<%= image_tag "legs.png" %>
+				</div>	
+			</div>
+
+			</div>
+
+			<div class="dollinfo">
+			<h1><%= @doll.name %></h1>
+			<h5><%= @doll.city %> :: <%= @doll.state %></h5>
+			<h6><%= @doll.tag %></h6>
+
 			<%= link_to 'Edit', edit_doll_path(@doll) %> |
 			<%= link_to 'Back', dolls_path %>
 
 		</div>
-
-		<%= render 'form' %>
+	</div>
+</div>
+	

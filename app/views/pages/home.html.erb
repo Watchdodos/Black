@@ -1,17 +1,49 @@
-<div class="row">
-	<div class="span2">
-		<h1> left-main </h1>
+
+
+<% if user_signed_in? %>
+
+	<%= link_to 'New Doll', new_doll_path %>
+
+
+	
+<% else %>	
+
+
+	<div class="row">
+		
+
+		<div class="span8">
+			
+
+			<iframe id="homevideo" width="620" height="349" src="http://
+			www.youtube.com/embed/DCZYb08SOR0?rel=0"
+			frameborder="0" allowfullscreen></iframe>
+
+			<h1> Black Voodoo Pin</h1>
+
+			<p>This site will act as an online social experience where you create and edit other people’s profiles. Essentially it's Facebook turned on its ass. </p>
+			<p>BlackVoodooPin.com gives users the ability to create digital voodoo dolls for anyone. This site will offer the ability to create a custom doll, from looks, to name and doll location. Then, users anonymously place pins into the doll and type in whatever they are thinking about that person. 
+			</p>
+			
+		</div>
+		<div class="span1"></div>
+
+
+
+		<div class="span3">
+			<h4>So now we ask you, are you dark enough?</h4>
+			<p>The pledge form below is the first step in activating your account. Voting black will solidify you a spot in the doll making process and insure that you will receive an email invitation in the upcoming weeks. 
+			</p>
+
+			<div id="formhead"> <h3>Pledge Now</h3> </div>
+
+			 
+			<iframe height="400" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="http://colorpledge.wufoo.com/embed/z7x3p3/"><a href="http://colorpledge.wufoo.com/forms/z7x3p3/">Black</a></iframe>
+		</div>
 	</div>
 
-	<div class="span8">
-	<%= render 'layouts/doll' %>
-	</div>
 
-	<div class="span2">
-		<h1>Pins</h1>
-		<%= link_to "Join now", new_user_registration_path , class: "btn btn-primary btn-small" %>
-	</div>
-</div>
+<% end%>
 
 
 
@@ -19,11 +51,3 @@
 
 
 
-
-
-
-<%= link_to" name of link" , "http://google.com" %>
-
-<div id="something">
-<%= link_to" name of link" , "www.google.com" %>
-</div>

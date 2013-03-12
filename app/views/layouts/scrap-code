@@ -1,0 +1,35 @@
+
+
+<%= link_to" name of link" , "http://google.com" %>
+
+<div id="something">
+<%= link_to" name of link" , "www.google.com" %>
+</div>
+
+
+<div class="span2">
+		<h1>Pins</h1>
+		<%= link_to "Join now", new_user_registration_path , class: "btn btn-primary btn-small" %>
+	</div>
+
+
+
+
+
+old code from homempage
+
+
+<div class="row">
+		<div class="span2">
+			<h1> left-main </h1>
+		</div>
+
+		<div class="span8">
+		<%= render 'layouts/doll' %>
+		</div>
+
+		<div class="span2">
+			<h1>Pins</h1>
+			<%= link_to "Join now", new_user_registration_path , class: "btn btn-primary btn-small" %>
+		</div>
+	</div>
