@@ -377,6 +377,41 @@ body {
 }
 
 
+/*  Custome Fonts */
+
+@font-face {
+  font-family: 'floyd';
+  src:
+       url(font-path('floyd.ttf'))  format('truetype');
+}
+
+@font-face {
+  font-family: 'floyd';
+  src: url(font-path('floyd.eot') + "?#iefix") format('embedded-opentype'),
+       url(font-path('floyd.woff')) format('woff'),
+       url(font-path('floyd.ttf'))  format('truetype'),
+       url(font-path('floyd.svg') + "#floyd") format('svg');
+}
+
+
+
+#formhead{
+  position: relative;
+  margin-bottom: -41px;
+  h3{
+    font-family: floyd,Helvetica,Arial,sans-serif;
+    color: #a50605;
+  }
+}
+
+h1 {
+ font-family: floyd,Helvetica,Arial,sans-serif;
+ color: #555;
+}
+
+h4 {
+color: #555;
+}
 
 
 
@@ -428,13 +463,6 @@ h6{margin-top: -16px;}
 	width: 620px;
 }
 
-#formhead{
-  position: relative;
-  margin-bottom: -41px;
-  h3{
-    color: #a50605;
-  }
-}
 
 
 
