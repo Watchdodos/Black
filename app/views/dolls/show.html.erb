@@ -21,24 +21,132 @@
 				<%= image_tag "rarm.png" %> 
 				</div>    	
 			</div>
-
 			<div id="bot">
 				<div id="legs">
 				<%= image_tag "legs.png" %>
 				</div>	
 			</div>
+            <div id='pins'>
+                <% @doll.pins.each do |pin| %>
+                    <div class='pin' style='position: absolute; top: <%= pin.coordinate_y %>px; left: <%= pin.coordinate_x %>px;'>
+                        <span><%= pin.coordinate_x %>, <%= pin.coordinate_y %></span>
+                        <p><%= pin.description %></p>
+                    </div>
+                <% end %>
+            </div>
+		</div>
+		<div class="dollinfo">
 
-			</div>
+		<h1><%= @doll.name %></h1>
+		<h5><%= @doll.city %> :: <%= @doll.state %></h5>
+		<h6><%= @doll.tag %></h6>
+        <div id='doll_id'><%= @doll.id.to_s %></div>
+		<%= link_to 'Edit', edit_doll_path(@doll) %> |
+		<%= link_to 'Back', dolls_path %>
+		</div>
+	</div>
 
-			<div class="dollinfo">
-			<h1><%= @doll.name %></h1>
-			<h5><%= @doll.city %> :: <%= @doll.state %></h5>
-			<h6><%= @doll.tag %></h6>
-
-			<%= link_to 'Edit', edit_doll_path(@doll) %> |
-			<%= link_to 'Back', dolls_path %>
-
+	<div class="span4">
+		<div class="pinboxwrap">
+            <div id="dragThis" style="width:23px;">
+                <%= image_tag "pin.png" %>
+                     <div id="pininput" style="display:none;">
+                        <%= render 'pins/form' %>
+                    </div>
+            </div>	
+			
 		</div>
 	</div>
 </div>
 	
+
+
+
+
+
+
+
+ 
+ 
+<!-- Drag -->
+
+
+<script>
+
+ $('#dragThis').draggable(
+    {
+containment: $('.span8'),
+ start: function(event, ui){
+            var offset = $(this).offset();
+            var xPos = offset.left;
+            var yPos = offset.top;
+            $('#posX').text('x: ' + xPos);
+            $('#posY').text('y: ' + yPos);
+            $("#dragThis").css("width","23px");
+
+            $(ui.helper).css('margin-left', event.clientX - $(event.target).offset().left)
+            $(ui.helper).css('margin-top', event.clientY - $(event.target).offset().top)
+        },
+
+
+        
+        drag: function(event, ui){
+            var offset = $(this).offset();
+            var xPos = offset.left;
+            var yPos = offset.top;
+            $('#posX').text('x: ' + xPos);
+            $('#posY').text('y: ' + yPos);
+            $("#dragThis").css("width","23px");
+            $("#dragThis").css("height","23px");
+            $("#pininput").css("display","none");
+        },
+
+        
+
+        stop: function(event, ui){
+            var finalOffset = $(this).offset();
+            var finalxPos = finalOffset.left;
+            var finalyPos = finalOffset.top;
+
+            $('#finalX').text('Final X: ' + finalxPos);
+            $('#finalY').text('Final y: ' + finalyPos);
+            $("#dragThis").css("width","23px");
+            $("#pininput").css("display","inline");
+
+        },
+    });
+
+    $('#new_pin').on('submit', function (e) {
+        e.preventDefault();
+
+
+        $.ajax({
+            type: 'post',
+            url: '/pins.json',
+            beforeSend: function (xhr) { xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')) },
+            data: {
+                pin: {
+                    coordinate_x: $("#dragThis").position().left,
+                    coordinate_y: $("#dragThis").position().top,
+                    description: $('#pin_description').val()
+                },
+                doll_id: $('#doll_id').text()
+            },
+            success: function (data) {
+                console.log('it works')
+
+
+                
+            },
+            fail: function (data) {
+                console.log('nope')
+            }
+        })
+    })
+ </script>
+
+
+
+<!-- Shhh nothing is in this part.... walk away...slowly...thats right..  
+	No shhh shh shh. go.
+	-in the voice of Kristen Schaal-

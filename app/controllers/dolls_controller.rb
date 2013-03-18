@@ -16,6 +16,7 @@ class DollsController < ApplicationController
   # GET /dolls/1.json
   def show
     @doll = Doll.find(params[:id])
+    @pin = Pin.new
 
     respond_to do |format|
       format.html # show.html.erb

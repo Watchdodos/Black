@@ -292,6 +292,7 @@ body {
 	background-color: #000;
 	background-image: url('background1.jpg');
 	background-repeat: no-repeat;
+
 }
 .container{
 	background-color:transparent;
@@ -336,6 +337,7 @@ body {
 	
 	 display:inline-block;
 	margin:0px auto;
+  margin-left: 66px;
 
 	
 }	
@@ -394,7 +396,6 @@ body {
 }
 
 
-
 #formhead{
   position: relative;
   margin-bottom: -41px;
@@ -420,7 +421,7 @@ color: #555;
 .dollinfo{
 text-align: center;
 position: relative;
-top: 32px;
+top: -28px3;
 
 h5{margin-top: -12px;}
 h6{margin-top: -16px;}
@@ -428,9 +429,16 @@ h6{margin-top: -16px;}
  
 
  .dollwraper{
- 	margin-top: 27px;
+ 	margin-top: 64px;
  }
 
+#pins{
+  position: relative;
+  background-color: #00f;
+  top: -620px;
+  left: 653px;
+
+}
 
 
 /* Top navbar */
@@ -457,13 +465,90 @@ h6{margin-top: -16px;}
 
 /* Dolls */
 #dollbox{
-	background-image: url('box.png');
+	background-image: url('dollbox.png');
 	background-repeat: no-repeat;
 	height: 720px;
 	width: 620px;
 }
 
 
+/* Pinbox */
+.pinboxwrap{
+  height: 218px;
+  width: 300px;
+  background-image: url('pinbox.gif');
+  background-color: #000;
+  position: fixed;
+}
+
+.pin{
+  background-image: url('pinset.png');
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 12px;
+  z-index: 2;
+
+  span{
+    display: none;
+  }
+  p{
+    color: #f00;
+    width: 242px;
+    display: none;
+  }
+}
+
+.pin:hover{
+
+    p{
+    display:inline-block;
+    width: 242px;
+    color: #666;
+    position: relative;
+    top: -6px;
+    left: 15px;
+    }
+}
+
+
+
+
+#dragThis {
+    width: 23px;
+    height: 23px;
+    color: white;
+    z-index: 3;
+
+}
+
+
+
+
+#pininput{
+  .form-actions{
+    height: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    width: 0;
+
+  }
+}
+#pininput .form-actions .btn-primary{
+  margin-left: 156px;
+    margin-top: -74px;
+  }
+#pininput .form-horizontal .control-label{
+  margin-left: -46px;
+    margin-top: 30px;
+}
+
+#pininput .form-horizontal .controls  {
+      border-top-width: 0;
+    margin-left: 32px;
+    margin-top: -50px;
+
+}
 
 
 
@@ -481,4 +566,22 @@ h6{margin-top: -16px;}
     margin-left: 57px;
      z-index:3;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 */

@@ -43,6 +43,10 @@ class PinsController < ApplicationController
   # POST /pins.json
   def create
     @pin = current_user.pins.new(params[:pin])
+    @doll = Doll.find(params[:doll_id])
+
+    @doll.pins.push @pin
+    @doll.save
 
     respond_to do |format|
       if @pin.save
