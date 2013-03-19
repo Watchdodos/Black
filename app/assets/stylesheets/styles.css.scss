@@ -209,7 +209,8 @@ input[type="color"],
   color: #3a87ad;
 }
 
-.navbar-inner {
+.navbar-inner { /* for backgroun of nav */
+
   background-image: -moz-linear-gradient(top, #dddddd, #b2b2b2);
   background-image: -ms-linear-gradient(top, #dddddd, #b2b2b2);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#dddddd), to(#b2b2b2));
@@ -292,12 +293,10 @@ body {
 	background-color: #000;
 	background-image: url('background1.jpg');
 	background-repeat: no-repeat;
-
 }
+
 .container{
 	background-color:transparent;
-
-
 }
 
 .footer{
@@ -313,33 +312,25 @@ body {
 #top{
 	margin:0px auto;
 	width:196px;
-	
-	
 }
 
 #head {
 	background-color: #00ff00;
 	margin:0px auto;
-	width:196px;
-
-	
-		
+	width:196px;		
 }
 
 #mid {
 	
 	width:511px;
-	margin:0px auto;
-	
-	}
+	margin:0px auto;	
+}
 	
 #larm {
 	
 	 display:inline-block;
 	margin:0px auto;
   margin-left: 66px;
-
-	
 }	
 
 
@@ -347,15 +338,12 @@ body {
 	background-color: #00ff00;
 	display:inline-block;
 	margin:0px -4px;
-	position:relative;
-		
+	position:relative;		
 }
 
 #rarm {
-	
 	 display:inline-block;
 	 margin:0px auto;
-	
 }
 
 #bot {
@@ -364,10 +352,8 @@ body {
 }
 
 #legs {
-	
-	 display:inline-block;
-	 margin:0px auto;
-	
+	display:inline-block;
+  margin:0px auto;
 }
 
 /* Shirt controls */
@@ -451,6 +437,7 @@ h6{margin-top: -16px;}
     right: 100px;
     z-index: 1030;
 
+
 }
 
 .navbar .brand {
@@ -473,12 +460,21 @@ h6{margin-top: -16px;}
 
 
 /* Pinbox */
-.pinboxwrap{
+.pinboxli{
   height: 218px;
   width: 300px;
   background-image: url('pinbox.gif');
   background-color: #000;
   position: fixed;
+}
+
+.pinboxlo{
+  height: 218px;
+  width: 300px;
+  background-image: url('pinboxtop.png');
+  background-color: #000;
+  position: fixed;
+  box-shadow: 3px 3px 4px #000;
 }
 
 .pin{
@@ -522,8 +518,6 @@ h6{margin-top: -16px;}
 }
 
 
-
-
 #pininput{
   .form-actions{
     height: 0;
@@ -551,6 +545,26 @@ h6{margin-top: -16px;}
 }
 
 
+.dollsignup{
+  margin-top: 240px;
+  text-align: center;
+  .well{
+ background-color: rgba(50, 50, 50, 0.5);
+    border-color: rgba(50, 50, 50, 0.5);
+  }
+  h1{
+    margin-top: 0px;
+  }
+}
+
+.findus{
+  margin-top: 30px;
+}
+
+.dollsignup .well {
+    background-color: rgba(50, 50, 50, 0.5);
+    border-color: rgba(50, 50, 50, 0.5);
+}
 
 /* FORM on index 
 
