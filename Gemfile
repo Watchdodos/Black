@@ -20,6 +20,8 @@ group :assets do
   gem 'bootstrap-sass', '~> 2.2.2.0'
   gem 'bootstrap-colorpicker-rails'
   gem 'google-analytics-rails'
+  gem 'sunspot_rails'
+  gem 'sunspot_solr'
   
   gem 'uglifier', '>= 1.0.3'
 end

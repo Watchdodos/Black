@@ -4,12 +4,11 @@ class DollsController < ApplicationController
   # GET /dolls
   # GET /dolls.json
   def index
-    @dolls = Doll.all
+@search = Doll.search do
+fulltext params[:search]
+end    
+    @dolls = @search.results
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @dolls }
-    end
   end
 
   # GET /dolls/1

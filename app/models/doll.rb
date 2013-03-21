@@ -7,4 +7,9 @@ has_many :pins
 belongs_to :user
 
 validates :user_id, presence: true
+
+searchable do
+  text :city, :name, :state, :tag
+  end
+
 end

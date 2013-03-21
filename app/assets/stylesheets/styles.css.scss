@@ -421,8 +421,8 @@ h6{margin-top: -16px;}
 #pins{
   position: relative;
   background-color: #00f;
-  top: -620px;
-  left: 653px;
+  top: -630px;
+  left: -75px;
 
 }
 
@@ -461,9 +461,10 @@ h6{margin-top: -16px;}
 
 /* Pinbox */
 .pinboxli{
-  height: 218px;
+  height: 220px;
   width: 300px;
-  background-image: url('pinbox.gif');
+  background-image: url('pins.png');
+  background-repeat: no-repeat;
   background-color: #000;
   position: fixed;
 }
@@ -506,15 +507,23 @@ h6{margin-top: -16px;}
     }
 }
 
+#blackbody{
+  width: 196px;
+  position: relative;
+  top: -23px;
+  left: 22px;
+}
 
 
 
 #dragThis {
     width: 23px;
     height: 23px;
+    position: relative;
+    top:17px;
+    left:23px;
     color: white;
     z-index: 3;
-
 }
 
 

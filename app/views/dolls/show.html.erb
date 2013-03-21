@@ -52,6 +52,9 @@
 		<div class="pinboxli">
             <div id="dragThis" style="width:23px;">
                 <%= image_tag "pin.png" %>
+                <div id="blackbody">
+                <%= image_tag "pinbody.png" %>
+                </div>
                      <div id="pininput" style="display:none;">
                         <%= render 'pins/form' %>
                     </div>
@@ -85,7 +88,6 @@ containment: $('.span8'),
             $(ui.helper).css('margin-top', event.clientY - $(event.target).offset().top)
         },
 
-
         
         drag: function(event, ui){
             var offset = $(this).offset();
@@ -96,6 +98,8 @@ containment: $('.span8'),
             $("#dragThis").css("width","23px");
             $("#dragThis").css("height","23px");
             $("#pininput").css("display","none");
+            $("#blackbody").css("display","none");
+
         },
 
         
@@ -123,16 +127,18 @@ containment: $('.span8'),
             beforeSend: function (xhr) { xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')) },
             data: {
                 pin: {
-                    coordinate_x: $("#dragThis").position().left,
-                    coordinate_y: $("#dragThis").position().top,
+                    coordinate_x: $("#dragThis").offset().left,
+                    coordinate_y: $("#dragThis").offset().top,
                     description: $('#pin_description').val()
                 },
                 doll_id: $('#doll_id').text()
             },
             success: function (data) {
                 console.log('it works')
-
-
+                location.reload()
+        $('#dragThis').fadeTo('slow', 0);
+        var input = $("f.input:reset");
+    
                 
             },
             fail: function (data) {
