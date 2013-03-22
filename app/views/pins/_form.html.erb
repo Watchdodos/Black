@@ -1,8 +1,8 @@
-<%= simple_form_for(@pin, html: {class: "form-horizontal" }) do |f| %>
+<%= simple_form_for(@pin, html: {class: "form-horizontal new_pin" }) do |f| %>
   <%= f.error_notification %>
 
   
-    <%= f.input :description, as: :text, input_html: {rows: "3"} %>
+    <%= f.input :description, as: :text, input_html: {rows: "3", class: 'pin_description', autocomplete: 'off'} %>
   
 
   <div class="form-actions">

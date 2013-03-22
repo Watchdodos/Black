@@ -50,16 +50,29 @@
 
 	<div class="span4">
 		<div class="pinboxli">
+
             <div id="dragThis" style="width:23px;">
-                <%= image_tag "pin.png" %>
-                <div id="blackbody">
-                <%= image_tag "pinbody.png" %>
+            <%= image_tag "pin.png" %>
+            <div id="blackbody">
+            <%= image_tag "pinbody.png" %>
+            </div>
+                 <div id="pininput" style="display:none;">
+                    <%= render 'pins/form' %>
                 </div>
-                     <div id="pininput" style="display:none;">
-                        <%= render 'pins/form' %>
-                    </div>
             </div>	
 			
+            <div id="dragThis2" style="width:23px;">
+            <%= image_tag "pin.png" %>
+            <div id="blackbody2">
+            <%= image_tag "pinbody.png" %>
+            </div>
+                 <div id="pininput2" style="display:none;">
+                    <%= render 'pins/form' %>
+                </div>
+            </div>  
+
+
+
 		</div>
 	</div>
 </div>
@@ -117,9 +130,8 @@ containment: $('.span8'),
         },
     });
 
-    $('#new_pin').on('submit', function (e) {
+    $('.new_pin').on('submit', function (e) {
         e.preventDefault();
-
 
         $.ajax({
             type: 'post',
@@ -127,19 +139,15 @@ containment: $('.span8'),
             beforeSend: function (xhr) { xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')) },
             data: {
                 pin: {
-                    coordinate_x: $("#dragThis").offset().left,
-                    coordinate_y: $("#dragThis").offset().top,
-                    description: $('#pin_description').val()
+                    coordinate_x: $(this).closest('.ui-draggable').offset().left,
+                    coordinate_y: $(this).closest('.ui-draggable').offset().top,
+                    description: $(this).find('#pin_description').val()
                 },
                 doll_id: $('#doll_id').text()
             },
             success: function (data) {
                 console.log('it works')
                 location.reload()
-        $('#dragThis').fadeTo('slow', 0);
-        var input = $("f.input:reset");
-    
-                
             },
             fail: function (data) {
                 console.log('nope')
@@ -147,6 +155,56 @@ containment: $('.span8'),
         })
     })
  </script>
+
+<script>
+
+ $('#dragThis2').draggable(
+    {
+containment: $('.span8'),
+ start: function(event, ui){
+            var offset = $(this).offset();
+            var xPos = offset.left;
+            var yPos = offset.top;
+            $('#posX').text('x: ' + xPos);
+            $('#posY').text('y: ' + yPos);
+            $("#dragThis2").css("width","23px");
+
+            $(ui.helper).css('margin-left', event.clientX - $(event.target).offset().left)
+            $(ui.helper).css('margin-top', event.clientY - $(event.target).offset().top)
+        },
+
+        
+        drag: function(event, ui){
+            var offset = $(this).offset();
+            var xPos = offset.left;
+            var yPos = offset.top;
+            $('#posX').text('x: ' + xPos);
+            $('#posY').text('y: ' + yPos);
+            $("#dragThis2").css("width","23px");
+            $("#dragThis2").css("height","23px");
+            $("#pininput2").css("display","none");
+            $("#blackbody2").css("display","none");
+
+        },
+
+        
+
+        stop: function(event, ui){
+            var finalOffset = $(this).offset();
+            var finalxPos = finalOffset.left;
+            var finalyPos = finalOffset.top;
+
+            $('#finalX').text('Final X: ' + finalxPos);
+            $('#finalY').text('Final y: ' + finalyPos);
+            $("#dragThis2").css("width","23px");
+            $("#pininput2").css("display","inline");
+
+        },
+    });
+
+ </script>
+
+
 
 
 

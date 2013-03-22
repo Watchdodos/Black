@@ -297,7 +297,27 @@ body {
 
 .container{
 	background-color:transparent;
+  position: absolute;
+  left: 170px;
 }
+
+#pins{
+  position: absolute;
+  background-color: #00f;
+  top: -60px;
+  left: -165px;
+
+}
+
+
+#dollbox{
+  background-image: url('dollbox.png');
+  background-repeat: no-repeat;
+  height: 720px;
+  width: 620px;
+}
+
+
 
 .footer{
 	margin-top: 50px;
@@ -306,6 +326,24 @@ body {
 		color: $gray;
 	}
 }
+
+
+.home4{
+  width: 100%;
+  height: 500px;
+  background-color: #00ff00;
+}
+
+.homesocial{
+  width: 100%;
+  height: 150px;
+  background-color: #ff0000;
+}
+
+.tabbable{
+  padding: 10px;
+}
+
 
 
 
@@ -418,13 +456,7 @@ h6{margin-top: -16px;}
  	margin-top: 64px;
  }
 
-#pins{
-  position: relative;
-  background-color: #00f;
-  top: -630px;
-  left: -75px;
 
-}
 
 
 /* Top navbar */
@@ -436,6 +468,7 @@ h6{margin-top: -16px;}
     position: fixed;
     right: 100px;
     z-index: 1030;
+    width: 1070px;
 
 
 }
@@ -451,12 +484,7 @@ h6{margin-top: -16px;}
 }
 
 /* Dolls */
-#dollbox{
-	background-image: url('dollbox.png');
-	background-repeat: no-repeat;
-	height: 720px;
-	width: 620px;
-}
+
 
 
 /* Pinbox */
@@ -467,6 +495,7 @@ h6{margin-top: -16px;}
   background-repeat: no-repeat;
   background-color: #000;
   position: fixed;
+  z-index: 5;
 }
 
 .pinboxlo{
@@ -476,6 +505,7 @@ h6{margin-top: -16px;}
   background-color: #000;
   position: fixed;
   box-shadow: 3px 3px 4px #000;
+  z-index: 5;
 }
 
 .pin{
@@ -524,6 +554,8 @@ h6{margin-top: -16px;}
     left:23px;
     color: white;
     z-index: 3;
+    position: absolute;
+    display: inline-block;
 }
 
 
@@ -575,7 +607,72 @@ h6{margin-top: -16px;}
     border-color: rgba(50, 50, 50, 0.5);
 }
 
+
+
+
+#blackbody2{
+  width: 196px;
+  position: relative;
+  top: -23px;
+  left: 22px;
+}
+
+
+
+#dragThis2 {
+    width: 23px;
+    height: 23px;
+    top:27px;
+    left:23px;
+    color: white;
+    z-index: 3;
+    position: absolute;
+    display: inline-block;
+}
+
+
+#pininput2{
+  .form-actions{
+    height: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    width: 0;
+
+  }
+}
+#pininput2 .form-actions .btn-primary{
+  margin-left: 156px;
+    margin-top: -74px;
+  }
+#pininput2 .form-horizontal .control-label{
+  margin-left: -46px;
+    margin-top: 30px;
+}
+
+#pininput2 .form-horizontal .controls  {
+      border-top-width: 0;
+    margin-left: 32px;
+    margin-top: -50px;
+
+}
+
+
+.dollsignup2{
+  margin-top: 240px;
+  text-align: center;
+  .well{
+ background-color: rgba(50, 50, 50, 0.5);
+    border-color: rgba(50, 50, 50, 0.5);
+  }
+  h1{
+    margin-top: 0px;
+  }
+}
+
+
 /* FORM on index 
+
 
 
 .form-horizontal .control-label {

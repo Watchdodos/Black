@@ -2,11 +2,126 @@
 
 <% if user_signed_in? %>
 
+<div class="row">
+	<div class="span8">
+
+
+	<div id="slider" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="item active">
+            <a href="./lifestyle.html">
+            <%= image_tag "logo_slider.png" %>
+            </a>
+            <div class="carousel-caption">
+              <p>Urban Dwelling</p>
+              <p><a href="./lifestyle.html">lifestyle apartments</a></p>
+            </div>
+          </div>
+          <div class="item">
+            <a href="./rooms.html">
+            <%= image_tag "logo_slider2.png" %>
+            </a>
+            <div class="carousel-caption">
+              <p>Dionysus Bar</p>
+              <p><a href="./rooms.html">Where hedonism is socially acceptable</a></p>
+            </div>
+          </div>
+          <div class="item">
+            <a href="./media.html">
+            <%= image_tag "logo_slider3.png" %>
+            </a>
+            <div class="carousel-caption">
+              <p>Heidegger its trendy to grow up.</p>
+              <p><a href="./media.html">Heidegger offers life tips Watch and learn (don't laugh)</a></p>
+            </div>
+          </div>
+          <div class="item">
+            <a href="./lifestyle.html">
+            <%= image_tag "logo_slider4.png" %>
+            </a>
+            <div class="carousel-caption">
+              <p>Check out the rooms</p>
+              <p><a href="./lifestyle.html">Could you dwell here?</a></p>
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="./rooms.html">
+            <%= image_tag "logo_slider5.png" %>
+            </a>
+            <div class="carousel-caption">
+              <p>The Rooftop Patio</p>
+              <p><a href="./rooms.html">Explore Amenities at Dwellings</a></p>
+            </div>
+          </div>
+
+
+        </div><!-- .carousel-inner -->
+        <!--  next and previous controls here
+              href values must reference the id for this carousel -->
+          <a class="carousel-control left" href="#slider" data-slide="prev">&lsaquo;</a>
+          <a class="carousel-control right" href="#slider" data-slide="next">&rsaquo;</a>
+      </div><!-- .carousel -->
+      <!-- end carousel -->
+	</div>
+
+	<div class="span4">
+		<div class="home4">	
+		<div class="tabbable">
+		  <ul class="nav nav-tabs">
+		    <li class="active"><a href="#homedolls" data-toggle="tab">Dolls</a></li>
+		    <li><a href="#homepins" data-toggle="tab">Pins</a></li>
+		  </ul>
+		  <div class="tab-content">
+		    <div id="homedolls" class="tab-pane active">
+		      <h4>Recent Dolls</h4>
+		      <p>Code here ...</p>
+		    </div>
+		    <div id="homepins" class="tab-pane">
+		    <h4>Recent Pins</h4>
+		      <p> and so on ...</p>
+		    </div>
+		  </div><!-- /.tab-content -->
+		</div><!-- /.tabbable -->
+
+		</div>	
+	</div>	
+</div>
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('.carousel slider').carousel({
+      interval: 1200
+    })
+  });
+</script>
+
+<div class="row">
+	<div class="span4">
+		<div class="homesocial">
+		</div>
+	</div>
+	<div class="span4">
+		<div class="homesocial">
+		</div>
+	</div>
+	<div class="span4">
+		<div class="homesocial">
+		</div>
+	</div>
+</div>
+
+
+</div>
+	
+ 
+
+
+
+<% else %>	
+
 	<%= link_to 'New Doll', new_doll_path %>
 
-
-	
-<% else %>	
 
 
 	<div class="row">
