@@ -26,6 +26,7 @@ end
   # GET /dolls/new
   # GET /dolls/new.json
   def new
+    @page = 'newdoll'
     @doll = current_user.dolls.new
 
     respond_to do |format|

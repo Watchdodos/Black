@@ -52,7 +52,7 @@
 		<div class="pinboxli">
 
             <div id="dragThis" style="width:23px;">
-            <%= image_tag "pin.png" %>
+            <%= image_tag "blackpin.png" %>
             <div id="blackbody">
             <%= image_tag "pinbody.png" %>
             </div>
@@ -62,9 +62,9 @@
             </div>	
 			
             <div id="dragThis2" style="width:23px;">
-            <%= image_tag "pin.png" %>
+            <%= image_tag "redpin.png" %>
             <div id="blackbody2">
-            <%= image_tag "pinbody.png" %>
+            <%= image_tag "redbody.png" %>
             </div>
                  <div id="pininput2" style="display:none;">
                     <%= render 'pins/form' %>
@@ -184,6 +184,10 @@ containment: $('.span8'),
             $("#dragThis2").css("height","23px");
             $("#pininput2").css("display","none");
             $("#blackbody2").css("display","none");
+            $("#dragThis2").css('background-color', 'yellow');
+
+            $("#dragThis2").css('background-image', 'url("blackpin.png")');
+           
 
         },
 

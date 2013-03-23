@@ -75,11 +75,26 @@
 		  <div class="tab-content">
 		    <div id="homedolls" class="tab-pane active">
 		      <h4>Recent Dolls</h4>
-		      <p>Code here ...</p>
+		      <p>
+            <ul>
+              <% current_user.dolls.each do |doll| %>
+                <li>.
+                  <%= link_to doll.id.to_s, doll_url(doll) %>
+                  <small><%= doll.pins.count %> pins</small>
+                </li>
+              <% end %>
+            </ul>
+          </p>
 		    </div>
 		    <div id="homepins" class="tab-pane">
 		    <h4>Recent Pins</h4>
-		      <p> and so on ...</p>
+		      <p>
+            <ul>
+              <% current_user.pins.each do |pin| %>
+                <li><%= link_to pin.id.to_s, doll_url(pin.doll) unless pin.doll.nil? %></li>
+              <% end %>
+            </ul>
+          </p>
 		    </div>
 		  </div><!-- /.tab-content -->
 		</div><!-- /.tabbable -->
@@ -90,7 +105,7 @@
 
   <script type="text/javascript">
   $(document).ready(function() {
-    $('.carousel slider').carousel({
+    $('#slider').carousel({
       interval: 1200
     })
   });
@@ -120,7 +135,6 @@
 
 <% else %>	
 
-	<%= link_to 'New Doll', new_doll_path %>
 
 
 
@@ -149,6 +163,8 @@
 			<h4>So now we ask you, are you dark enough?</h4>
 			<p>The pledge form below is the first step in activating your account. Voting black will solidify you a spot in the doll making process and insure that you will receive an email invitation in the upcoming weeks. 
 			</p>
+      <div class="btn btn-danger "><%= link_to "Beta Sign Up Now", new_user_registration_path %></div>
+
 
 			<div id="formhead"> <h3>Pledge Now</h3> </div>
 
