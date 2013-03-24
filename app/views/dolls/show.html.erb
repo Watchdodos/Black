@@ -51,19 +51,17 @@
 	<div class="span4">
 		<div class="pinboxli">
 
-            <div id="dragThis" style="width:23px;">
-            <%= image_tag "blackpin.png" %>
+            <div id="blackpin" style="width:23px; background-image:url('/assets/blackpin.png');">
             <div id="blackbody">
-            <%= image_tag "pinbody.png" %>
+            <%= image_tag "blackbody3.png" %>
             </div>
                  <div id="pininput" style="display:none;">
                     <%= render 'pins/form' %>
                 </div>
             </div>	
 			
-            <div id="dragThis2" style="width:23px;">
-            <%= image_tag "redpin.png" %>
-            <div id="blackbody2">
+            <div id="redpin" style="width:23px; background-image:url('/assets/redpin.png');">
+            <div id="redbody">
             <%= image_tag "redbody.png" %>
             </div>
                  <div id="pininput2" style="display:none;">
@@ -71,7 +69,41 @@
                 </div>
             </div>  
 
+            <div id="yellowpin" style="width:23px; background-image:url('/assets/yellowpin.png');">
+            <div id="yellowbody">
+            <%= image_tag "redbody.png" %>
+            </div>
+                 <div id="pininput3" style="display:none;">
+                    <%= render 'pins/form' %>
+                </div>
+            </div>  
 
+            <div id="bluepin" style="width:23px; background-image:url('/assets/bluepin.png');">
+            <div id="bluebody">
+            <%= image_tag "redbody.png" %>
+            </div>
+                 <div id="pininput4" style="display:none;">
+                    <%= render 'pins/form' %>
+                </div>
+            </div>  
+
+            <div id="greenpin" style="width:23px; background-image:url('/assets/greenpin.png');">
+            <div id="greenbody">
+            <%= image_tag "redbody.png" %>
+            </div>
+                 <div id="pininput5" style="display:none;">
+                    <%= render 'pins/form' %>
+                </div>
+            </div> 
+
+             <div id="whitepin" style="width:23px; background-image:url('/assets/whitepin.png');">
+            <div id="whitebody">
+            <%= image_tag "redbody.png" %>
+            </div>
+                 <div id="pininput6" style="display:none;">
+                    <%= render 'pins/form' %>
+                </div>
+            </div>
 
 		</div>
 	</div>
@@ -81,12 +113,12 @@
 
   
 
-<!-- Drag -->
 
+<!-- Black Pin -->
 
 <script>
 
- $('#dragThis').draggable(
+ $('#blackpin').draggable(
     {
 containment: $('.span8'),
  start: function(event, ui){
@@ -95,7 +127,7 @@ containment: $('.span8'),
             var yPos = offset.top;
             $('#posX').text('x: ' + xPos);
             $('#posY').text('y: ' + yPos);
-            $("#dragThis").css("width","23px");
+            $("#blackpin").css("width","23px");
 
             $(ui.helper).css('margin-left', event.clientX - $(event.target).offset().left)
             $(ui.helper).css('margin-top', event.clientY - $(event.target).offset().top)
@@ -108,8 +140,8 @@ containment: $('.span8'),
             var yPos = offset.top;
             $('#posX').text('x: ' + xPos);
             $('#posY').text('y: ' + yPos);
-            $("#dragThis").css("width","23px");
-            $("#dragThis").css("height","23px");
+            $("#blackpin").css("width","23px");
+            $("#blackpin").css("height","23px");
             $("#pininput").css("display","none");
             $("#blackbody").css("display","none");
 
@@ -124,7 +156,7 @@ containment: $('.span8'),
 
             $('#finalX').text('Final X: ' + finalxPos);
             $('#finalY').text('Final y: ' + finalyPos);
-            $("#dragThis").css("width","23px");
+            $("#blackpin").css("width","23px");
             $("#pininput").css("display","inline");
 
         },
@@ -156,9 +188,12 @@ containment: $('.span8'),
     })
  </script>
 
+
+<!-- Red Pin -->
+
 <script>
 
- $('#dragThis2').draggable(
+ $('#redpin').draggable(
     {
 containment: $('.span8'),
  start: function(event, ui){
@@ -167,7 +202,7 @@ containment: $('.span8'),
             var yPos = offset.top;
             $('#posX').text('x: ' + xPos);
             $('#posY').text('y: ' + yPos);
-            $("#dragThis2").css("width","23px");
+            $("#redpin").css("width","23px");
 
             $(ui.helper).css('margin-left', event.clientX - $(event.target).offset().left)
             $(ui.helper).css('margin-top', event.clientY - $(event.target).offset().top)
@@ -180,13 +215,11 @@ containment: $('.span8'),
             var yPos = offset.top;
             $('#posX').text('x: ' + xPos);
             $('#posY').text('y: ' + yPos);
-            $("#dragThis2").css("width","23px");
-            $("#dragThis2").css("height","23px");
+            $("#redpin").css("width","23px");
+            $("#redpin").css("height","23px");
             $("#pininput2").css("display","none");
-            $("#blackbody2").css("display","none");
-            $("#dragThis2").css('background-color', 'yellow');
-
-            $("#dragThis2").css('background-image', 'url("blackpin.png")');
+            $("#redbody").css("display","none");
+            $("#redpin").css('background-image', 'url("/assets/redpind.png")');
            
 
         },
@@ -200,8 +233,113 @@ containment: $('.span8'),
 
             $('#finalX').text('Final X: ' + finalxPos);
             $('#finalY').text('Final y: ' + finalyPos);
-            $("#dragThis2").css("width","23px");
+            $("#redpin").css("width","23px");
             $("#pininput2").css("display","inline");
+
+        },
+    });
+
+ </script>
+
+<!-- Yellow Pin -->
+
+<script>
+
+ $('#yellowpin').draggable(
+    {
+containment: $('.span8'),
+ start: function(event, ui){
+            var offset = $(this).offset();
+            var xPos = offset.left;
+            var yPos = offset.top;
+            $('#posX').text('x: ' + xPos);
+            $('#posY').text('y: ' + yPos);
+            $("#yellowpin").css("width","23px");
+
+            $(ui.helper).css('margin-left', event.clientX - $(event.target).offset().left)
+            $(ui.helper).css('margin-top', event.clientY - $(event.target).offset().top)
+        },
+
+        
+        drag: function(event, ui){
+            var offset = $(this).offset();
+            var xPos = offset.left;
+            var yPos = offset.top;
+            $('#posX').text('x: ' + xPos);
+            $('#posY').text('y: ' + yPos);
+            $("#yellowpin").css("width","23px");
+            $("#yellowpin").css("height","23px");
+            $("#pininput3").css("display","none");
+            $("#yellowbody").css("display","none");
+            $("#yellowpin").css('background-image', 'url("/assets/yellowpind.png")');
+           
+
+        },
+
+        
+
+        stop: function(event, ui){
+            var finalOffset = $(this).offset();
+            var finalxPos = finalOffset.left;
+            var finalyPos = finalOffset.top;
+
+            $('#finalX').text('Final X: ' + finalxPos);
+            $('#finalY').text('Final y: ' + finalyPos);
+            $("#yellowpin").css("width","23px");
+            $("#pininput3").css("display","inline");
+
+        },
+    });
+
+ </script>
+
+
+<!-- Blue Pin -->
+
+<script>
+
+ $('#bluepin').draggable(
+    {
+containment: $('.span8'),
+ start: function(event, ui){
+            var offset = $(this).offset();
+            var xPos = offset.left;
+            var yPos = offset.top;
+            $('#posX').text('x: ' + xPos);
+            $('#posY').text('y: ' + yPos);
+            $("#bluepin").css("width","23px");
+
+            $(ui.helper).css('margin-left', event.clientX - $(event.target).offset().left)
+            $(ui.helper).css('margin-top', event.clientY - $(event.target).offset().top)
+        },
+
+        
+        drag: function(event, ui){
+            var offset = $(this).offset();
+            var xPos = offset.left;
+            var yPos = offset.top;
+            $('#posX').text('x: ' + xPos);
+            $('#posY').text('y: ' + yPos);
+            $("#bluepin").css("width","23px");
+            $("#bluepin").css("height","23px");
+            $("#pininput4").css("display","none");
+            $("#bluebody").css("display","none");
+            $("#bluepin").css('background-image', 'url("/assets/bluepind.png")');
+           
+
+        },
+
+        
+
+        stop: function(event, ui){
+            var finalOffset = $(this).offset();
+            var finalxPos = finalOffset.left;
+            var finalyPos = finalOffset.top;
+
+            $('#finalX').text('Final X: ' + finalxPos);
+            $('#finalY').text('Final y: ' + finalyPos);
+            $("#bluepin").css("width","23px");
+            $("#pininput4").css("display","inline");
 
         },
     });
@@ -211,6 +349,110 @@ containment: $('.span8'),
 
 
 
+ <!-- green Pin -->
+
+<script>
+
+ $('#greenpin').draggable(
+    {
+containment: $('.span8'),
+ start: function(event, ui){
+            var offset = $(this).offset();
+            var xPos = offset.left;
+            var yPos = offset.top;
+            $('#posX').text('x: ' + xPos);
+            $('#posY').text('y: ' + yPos);
+            $("#greenpin").css("width","23px");
+
+            $(ui.helper).css('margin-left', event.clientX - $(event.target).offset().left)
+            $(ui.helper).css('margin-top', event.clientY - $(event.target).offset().top)
+        },
+
+        
+        drag: function(event, ui){
+            var offset = $(this).offset();
+            var xPos = offset.left;
+            var yPos = offset.top;
+            $('#posX').text('x: ' + xPos);
+            $('#posY').text('y: ' + yPos);
+            $("#greenpin").css("width","23px");
+            $("#greenpin").css("height","23px");
+            $("#pininput5").css("display","none");
+            $("#greenbody").css("display","none");
+            $("#greenpin").css('background-image', 'url("/assets/greenpind.png")');
+           
+
+        },
+
+        
+
+        stop: function(event, ui){
+            var finalOffset = $(this).offset();
+            var finalxPos = finalOffset.left;
+            var finalyPos = finalOffset.top;
+
+            $('#finalX').text('Final X: ' + finalxPos);
+            $('#finalY').text('Final y: ' + finalyPos);
+            $("#greenpin").css("width","23px");
+            $("#pininput5").css("display","inline");
+
+        },
+    });
+
+ </script>
+
+
+ <!-- white Pin -->
+
+<script>
+
+ $('#whitepin').draggable(
+    {
+containment: $('.span8'),
+ start: function(event, ui){
+            var offset = $(this).offset();
+            var xPos = offset.left;
+            var yPos = offset.top;
+            $('#posX').text('x: ' + xPos);
+            $('#posY').text('y: ' + yPos);
+            $("#whitepin").css("width","23px");
+
+            $(ui.helper).css('margin-left', event.clientX - $(event.target).offset().left)
+            $(ui.helper).css('margin-top', event.clientY - $(event.target).offset().top)
+        },
+
+        
+        drag: function(event, ui){
+            var offset = $(this).offset();
+            var xPos = offset.left;
+            var yPos = offset.top;
+            $('#posX').text('x: ' + xPos);
+            $('#posY').text('y: ' + yPos);
+            $("#whitepin").css("width","23px");
+            $("#whitepin").css("height","23px");
+            $("#pininput6").css("display","none");
+            $("#whitebody").css("display","none");
+            $("#whitepin").css('background-image', 'url("/assets/whitepind.png")');
+           
+
+        },
+
+        
+
+        stop: function(event, ui){
+            var finalOffset = $(this).offset();
+            var finalxPos = finalOffset.left;
+            var finalyPos = finalOffset.top;
+
+            $('#finalX').text('Final X: ' + finalxPos);
+            $('#finalY').text('Final y: ' + finalyPos);
+            $("#whitepin").css("width","23px");
+            $("#pininput6").css("display","inline");
+
+        },
+    });
+
+ </script>
 
 
 <% else %>

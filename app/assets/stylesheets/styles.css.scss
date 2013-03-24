@@ -278,16 +278,34 @@ input[type="color"],
 
 
 
-
-
-
-
-
-
-
-hover{
-  left: 100px;
+.home4{
+  width: 100%;
+  height: 500px;
+  background-color: rgba(50, 50, 50, 0.5);
+  border-color: #00ff00;
+   border:2px solid;
+    overflow:auto;
 }
+
+.homesocial{
+  width: 100%;
+  height: 150px;
+  background-color: #ff0000;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 body {
@@ -330,17 +348,7 @@ body {
 }
 
 
-.home4{
-  width: 100%;
-  height: 500px;
-  background-color: #00ff00;
-}
 
-.homesocial{
-  width: 100%;
-  height: 150px;
-  background-color: #ff0000;
-}
 
 .tabbable{
   padding: 10px;
@@ -540,26 +548,132 @@ h6{margin-top: -16px;}
     }
 }
 
+/* Pins */
+
+/* black */
+
+
 #blackbody{
-  width: 196px;
+  width: 213px;
   position: relative;
-  top: -23px;
-  left: 22px;
+  top: -4px;
+  left: 21px;
 }
 
 
-
-#dragThis {
+#blackpin {
     width: 23px;
     height: 23px;
     position: relative;
-    top:17px;
-    left:23px;
+    top:15px;
+    left:22px;
     color: white;
     z-index: 3;
     position: absolute;
     display: inline-block;
 }
+
+/* red */
+
+#redpin {
+    width: 23px;
+    height: 23px;
+    top:47px;
+    left:22px;
+    color: white;
+    z-index: 3;
+    position: absolute;
+    display: inline-block;
+}
+
+#redbody{
+  width: 213px;
+  position: relative;
+  top: -4px;
+  left: 23px;
+}
+
+
+/* yellow */
+
+#yellowpin {
+    width: 23px;
+    height: 23px;
+    top:77px;
+    left:22px;
+    color: white;
+    z-index: 3;
+    position: absolute;
+    display: inline-block;
+}
+
+#yellowbody{
+  width: 213px;
+  position: relative;
+  top: -4px;
+  left: 23px;
+}
+
+
+/* blue */
+
+#bluepin {
+    width: 23px;
+    height: 23px;
+    top:109px;
+    left:22px;
+    color: white;
+    z-index: 3;
+    position: absolute;
+    display: inline-block;
+}
+
+#bluebody{
+  width: 213px;
+  position: relative;
+  top: -4px;
+  left: 23px;
+}
+
+#greenpin {
+    width: 23px;
+    height: 23px;
+    top:140px;
+    left:22px;
+    color: white;
+    z-index: 3;
+    position: absolute;
+    display: inline-block;
+}
+
+#greenbody{
+  width: 213px;
+  position: relative;
+  top: -4px;
+  left: 23px;
+}
+
+
+#whitepin {
+    width: 23px;
+    height: 23px;
+    top:173px;
+    left:22px;
+    color: white;
+    z-index: 3;
+    position: absolute;
+    display: inline-block;
+}
+
+#whitebody{
+  width: 213px;
+  position: relative;
+  top: -4px;
+  left: 23px;
+}
+
+
+
 
 
 #pininput{
@@ -572,6 +686,7 @@ h6{margin-top: -16px;}
 
   }
 }
+
 #pininput .form-actions .btn-primary{
   margin-left: 156px;
     margin-top: -74px;
@@ -589,49 +704,6 @@ h6{margin-top: -16px;}
 }
 
 
-.dollsignup{
-  margin-top: 240px;
-  text-align: center;
-  .well{
- background-color: rgba(50, 50, 50, 0.5);
-    border-color: rgba(50, 50, 50, 0.5);
-  }
-  h1{
-    margin-top: 0px;
-  }
-}
-
-.findus{
-  margin-top: 30px;
-}
-
-.dollsignup .well {
-    background-color: rgba(50, 50, 50, 0.5);
-    border-color: rgba(50, 50, 50, 0.5);
-}
-
-
-
-
-#blackbody2{
-  width: 213px;
-  position: relative;
-  top: -26px;
-  left: 23px;
-}
-
-
-
-#dragThis2 {
-    width: 23px;
-    height: 23px;
-    top:47px;
-    left:22px;
-    color: white;
-    z-index: 3;
-    position: absolute;
-    display: inline-block;
-}
 
 
 #pininput2{
@@ -659,6 +731,142 @@ h6{margin-top: -16px;}
     margin-top: -50px;
 
 }
+
+
+
+
+#pininput3{
+  .form-actions{
+    height: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    width: 0;
+
+  }
+}
+#pininput3 .form-actions .btn-primary{
+  margin-left: 156px;
+    margin-top: -74px;
+  }
+#pininput3 .form-horizontal .control-label{
+  margin-left: -46px;
+    margin-top: 30px;
+}
+
+#pininput3 .form-horizontal .controls  {
+      border-top-width: 0;
+    margin-left: 32px;
+    margin-top: -50px;
+
+}
+
+#pininput4{
+  .form-actions{
+    height: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    width: 0;
+
+  }
+}
+#pininput4 .form-actions .btn-primary{
+  margin-left: 156px;
+    margin-top: -74px;
+  }
+#pininput4 .form-horizontal .control-label{
+  margin-left: -46px;
+    margin-top: 30px;
+}
+
+#pininput4 .form-horizontal .controls  {
+      border-top-width: 0;
+    margin-left: 32px;
+    margin-top: -50px;
+
+}
+
+#pininput5{
+  .form-actions{
+    height: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    width: 0;
+
+  }
+}
+#pininput5 .form-actions .btn-primary{
+  margin-left: 156px;
+    margin-top: -74px;
+  }
+#pininput5 .form-horizontal .control-label{
+  margin-left: -46px;
+    margin-top: 30px;
+}
+
+#pininput5 .form-horizontal .controls  {
+      border-top-width: 0;
+    margin-left: 32px;
+    margin-top: -50px;
+
+}
+
+#pininput6{
+  .form-actions{
+    height: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    width: 0;
+
+  }
+}
+#pininput6 .form-actions .btn-primary{
+  margin-left: 156px;
+    margin-top: -74px;
+  }
+#pininput6 .form-horizontal .control-label{
+  margin-left: -46px;
+    margin-top: 30px;
+}
+
+#pininput6 .form-horizontal .controls  {
+      border-top-width: 0;
+    margin-left: 32px;
+    margin-top: -50px;
+
+}
+
+.dollsignup{
+  margin-top: 240px;
+  text-align: center;
+  .well{
+ background-color: rgba(50, 50, 50, 0.5);
+    border-color: rgba(50, 50, 50, 0.5);
+  }
+  h1{
+    margin-top: 0px;
+  }
+}
+
+.findus{
+  margin-top: 30px;
+}
+
+.dollsignup .well {
+    background-color: rgba(50, 50, 50, 0.5);
+    border-color: rgba(50, 50, 50, 0.5);
+}
+
+
+
+
+
+
+
+
 
 
 .dollsignup2{
