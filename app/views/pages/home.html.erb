@@ -13,8 +13,8 @@
             <%= image_tag "logo_slider.png" %>
             </a>
             <div class="carousel-caption">
-              <p>Urban Dwelling</p>
-              <p><a href="./lifestyle.html">lifestyle apartments</a></p>
+              <p>Dolls With Souls: You have the freedom</p>
+              <p><a href="./lifestyle.html">Freedom of shoving any soul of your choosing into a little doll's body.</a></p>
             </div>
           </div>
           <div class="item">
@@ -22,8 +22,8 @@
             <%= image_tag "logo_slider2.png" %>
             </a>
             <div class="carousel-caption">
-              <p>Dionysus Bar</p>
-              <p><a href="./rooms.html">Where hedonism is socially acceptable</a></p>
+              <p>Curse With Caution: Just a warning</p>
+              <p><a href="./rooms.html">These curses are not to be taken lightly. They can come with great repercussions.</a></p>
             </div>
           </div>
           <div class="item">
@@ -31,8 +31,8 @@
             <%= image_tag "logo_slider3.png" %>
             </a>
             <div class="carousel-caption">
-              <p>Heidegger its trendy to grow up.</p>
-              <p><a href="./media.html">Heidegger offers life tips Watch and learn (don't laugh)</a></p>
+              <p>Feed the addiction, let the pins flow through the flesh freely</p>
+              <p><a href="./media.html">Exhale. Smile with sadistic pleasure.</a></p>
             </div>
           </div>
           <div class="item">
@@ -40,8 +40,8 @@
             <%= image_tag "logo_slider4.png" %>
             </a>
             <div class="carousel-caption">
-              <p>Check out the rooms</p>
-              <p><a href="./lifestyle.html">Could you dwell here?</a></p>
+              <p>Don't let your doll hide in shame.</p>
+              <p><a href="./lifestyle.html">They were stabbed for a reason, inform the internet world of that reason.</a></p>
             </div>
           </div>
 
@@ -50,8 +50,8 @@
             <%= image_tag "logo_slider5.png" %>
             </a>
             <div class="carousel-caption">
-              <p>The Rooftop Patio</p>
-              <p><a href="./rooms.html">Explore Amenities at Dwellings</a></p>
+              <p>You Couldn't Even Imagine</p>
+              <p><a href="./rooms.html">We have many more goodies for you all to preform rituals with coming soon.</a></p>
             </div>
           </div>
 
@@ -74,12 +74,12 @@
 		  </ul>
 		  <div class="tab-content">
 		    <div id="homedolls" class="tab-pane active">
-		      <h4>Recent Dolls</h4>
+		      <div id="sidehead"> <h3>Recent Dolls</h3> </div>
 		      <p>
             <ul>
               <% current_user.dolls.each do |doll| %>
                 <li>.
-                  <%= link_to doll.id.to_s, doll_url(doll) %>
+                  <%= link_to doll.name.to_s, doll_url(doll) %>
                   <small><%= doll.pins.count %> pins</small>
                 </li>
               <% end %>
@@ -113,23 +113,37 @@
 
 <div class="row">
 	<div class="span4">
-		<div class="homesocial">
+		<div class="homesociall">
+      <a href="http://www.facebook.com/pages/Black-Voodoo-Pin/228155813990889" target="_blank">
+      <div class="icon">   
+        <p> Share Anonymously </p>
+      </div>
+		</a>
+    </div>
+	</div>
+	<div class="span4">
+		<div class="homesocialc">
+      <a href="http://www.reddit.com/r/blackvoodoopin/" target="_blank">
+      <div class="icon">
+      <p> Everything Voodoo </p>
+      </div>
+    </a>
 		</div>
 	</div>
 	<div class="span4">
-		<div class="homesocial">
-		</div>
-	</div>
-	<div class="span4">
-		<div class="homesocial">
+
+		<div class="homesocialr">
+       <a href="https://twitter.com/VoodooPin" target="_blank">
+      <div class="icon">
+      <p> Hate-mail Inbox</p>          
+      </div>
+    </a>
 		</div>
 	</div>
 </div>
-
 
 </div>
 	
- 
 
 
 
@@ -154,6 +168,30 @@
 			<p>BlackVoodooPin.com gives users the ability to create digital voodoo dolls for anyone. This site will offer the ability to create a custom doll, from looks, to name and doll location. Then, users anonymously place pins into the doll and type in whatever they are thinking about that person. 
 			</p>
 			
+<div class="row">
+  <div class="span4">
+    <div class="homesociall">
+      <a href="http://www.facebook.com/pages/Black-Voodoo-Pin/228155813990889" target="_blank">
+      <div class="icon">   
+        <p> Share Anonymously </p>
+      </div>
+    </a>
+    </div>
+  </div>
+  
+  <div class="span4">
+
+    <div class="homesocialr">
+       <a href="https://twitter.com/VoodooPin" target="_blank">
+      <div class="icon">
+      <p> Hate-mail Inbox</p>          
+      </div>
+    </a>
+    </div>
+  </div>
+</div>
+
+      
 		</div>
 		<div class="span1"></div>
 
@@ -172,6 +210,8 @@
 			<iframe height="400" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="http://colorpledge.wufoo.com/embed/z7x3p3/"><a href="http://colorpledge.wufoo.com/forms/z7x3p3/">Black</a></iframe>
 		</div>
 	</div>
+
+
 
 
 <% end%>

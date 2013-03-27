@@ -6,17 +6,30 @@
     <li><%= link_to "Home", root_path %></li>
     <li><%= link_to "About", about_path %></li>
     <li><%= link_to "New Doll", new_doll_path, :class => (@page == 'newdoll' ? 'active' : '') %></li>
-    <li><%= link_to "Search", dolls_path %></li>
 
     </ul>
 
- 
 
     <ul class="nav pull-right">
       <% if user_signed_in? %>
+
+ <div class="navbar-search pull-left">
+      <%= form_tag dolls_path, :method => :get do %>
+      <%= text_field_tag :search, params[:search] , :placeholder => 'Search'  %>
+      </div>  
+      <% end %>
+
+
       <li><%= link_to "Edit Profile", edit_user_registration_path %></li> 
       <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
       <% else %>
+
+      <div class="navbar-search pull-left">
+      <%= form_tag dolls_path, :method => :get do %>
+      <%= text_field_tag :search, params[:search] , :placeholder => 'Search'  %>
+      </div>  
+      <% end %>
+
       <li><%= link_to "Login", new_user_session_path %></li>
       <% end %>
     </ul>
