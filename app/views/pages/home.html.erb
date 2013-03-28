@@ -89,9 +89,14 @@
 		    <div id="homepins" class="tab-pane">
 		    <h4>Recent Pins</h4>
 		      <p>
+
             <ul>
               <% current_user.pins.each do |pin| %>
-                <li><%= link_to pin.id.to_s, doll_url(pin.doll) unless pin.doll.nil? %></li>
+                <li><%= link_to pin.id.to_s, doll_url(pin.doll) unless pin.doll.nil? %>
+                                  <%= link_to pin.doll.name.to_s, doll_url(pin.doll) unless pin.doll.nil? %>
+
+                </li>
+
               <% end %>
             </ul>
           </p>
@@ -106,7 +111,7 @@
   <script type="text/javascript">
   $(document).ready(function() {
     $('#slider').carousel({
-      interval: 1200
+      interval: 5000
     })
   });
 </script>

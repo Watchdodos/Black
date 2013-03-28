@@ -440,7 +440,7 @@ background-image: url('nav.png');
 
 #pins{
   position: absolute;
-  background-color: #00f;
+  background-color: #fff;
   top: -60px;
   left: -165px;
 
@@ -674,12 +674,36 @@ h6{margin-top: -16px;}
   }
 }
 
+.pin.red {
+  background-image: url('pinsetred.png');
+}
+
+.pin.blue {
+  background-image: url('pinsetblue.png');
+}
+
+.pin.yellow {
+  background-image: url('pinsetyellow.png');
+}
+
+.pin.green {
+  background-image: url('pinsetgreen.png');
+}
+
+.pin.white {
+  background-image: url('pinsetwhite.png');
+}
+
+.pin.black {
+  background-image: url('pinsetblack.png');
+}
+
 .pin:hover{
 
     p{
     display:inline-block;
     width: 242px;
-    color: #666;
+    color: #fff;
     position: relative;
     top: -6px;
     left: 15px;
@@ -1102,8 +1126,6 @@ div#homepins.tab-pane ul li{
 }
 
 
-
-
 div.icon p {
     color: #B3B3B3;
     font-size: 24px;
@@ -1116,8 +1138,8 @@ div.icon p {
     width: 150px;
 }
 
-div.icon:hover p a {
-    color: #dddddd;
+div.icon:hover p  {
+    color: #ddd;
     font-size: 24px;
     height: 30px;
     left: 71px;
@@ -1138,8 +1160,17 @@ div.icon:hover p a {
     padding: 19px 20px 20px;
 }
 
-a{
+a:hover{
   text-decoration: none;
+}
+
+body{
+text-decoration: none;
+}
+
+
+div.span8 h1{
+  color: grayLight;
 }
 
 /* FORM on index 

@@ -70,24 +70,26 @@
         $('#cp2').colorpicker();
         $('#cp3').colorpicker();
 
-        var shirtColor = $('#shirt')[0].style;
-        $('#cp4').colorpicker().on('changeColor', function(ev) {
-            shirtColor.backgroundColor = ev.color.toHex();
-        });
-
-        try {
-            // load latest commits under a try to not paralize the app
-            ghcommits.load(10, function(data) {
-                if (data && (data.length > 0)) {
-                    $(data).each(function(i, item) {
-                        $("#changelog ul").append($('<li>').html("<b>" + item.commit.author
-                                .date.replace("T", " ").replace("Z", "") +
-                                ":</b> " + item.commit.message));
-                    });
-                }
-
+        if ($('#shirt').length) {
+            var shirtColor = $('#shirt')[0].style;
+            $('#cp4').colorpicker().on('changeColor', function(ev) {
+                shirtColor.backgroundColor = ev.color.toHex();
             });
-        } catch (err) {
+
+            try {
+                // load latest commits under a try to not paralize the app
+                ghcommits.load(10, function(data) {
+                    if (data && (data.length > 0)) {
+                        $(data).each(function(i, item) {
+                            $("#changelog ul").append($('<li>').html("<b>" + item.commit.author
+                                    .date.replace("T", " ").replace("Z", "") +
+                                    ":</b> " + item.commit.message));
+                        });
+                    }
+
+                });
+            } catch (err) {
+            }
         }
     });
 }(window, window.jQuery);

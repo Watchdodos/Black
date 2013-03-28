@@ -28,7 +28,7 @@
 			</div>
             <div id='pins'>
                 <% @doll.pins.each do |pin| %>
-                    <div class='pin' style='position: absolute; top: <%= pin.coordinate_y %>px; left: <%= pin.coordinate_x %>px;'>
+                    <div class='pin <%= pin.color %>' style='position: absolute; top: <%= pin.coordinate_y %>px; left: <%= pin.coordinate_x %>px;'>
                         <span><%= pin.coordinate_x %>, <%= pin.coordinate_y %></span>
                         <p><%= pin.description %></p>
                     </div>
@@ -56,7 +56,7 @@
             <%= image_tag "blackbody3.png" %>
             </div>
                  <div id="pininput" style="display:none;">
-                    <%= render 'pins/form' %>
+                    <%= render :partial => 'pins/form', :locals => { :color => 'black' } %>
                 </div>
             </div>	
 			
@@ -65,7 +65,7 @@
             <%= image_tag "redbody.png" %>
             </div>
                  <div id="pininput2" style="display:none;">
-                    <%= render 'pins/form' %>
+                    <%= render :partial => 'pins/form', :locals => { :color => 'red' } %>
                 </div>
             </div>  
 
@@ -74,7 +74,7 @@
             <%= image_tag "redbody.png" %>
             </div>
                  <div id="pininput3" style="display:none;">
-                    <%= render 'pins/form' %>
+                    <%= render :partial => 'pins/form', :locals => { :color => 'yellow' } %>
                 </div>
             </div>  
 
@@ -83,7 +83,7 @@
             <%= image_tag "redbody.png" %>
             </div>
                  <div id="pininput4" style="display:none;">
-                    <%= render 'pins/form' %>
+                    <%= render :partial => 'pins/form', :locals => { :color => 'blue' } %>
                 </div>
             </div>  
 
@@ -92,7 +92,7 @@
             <%= image_tag "redbody.png" %>
             </div>
                  <div id="pininput5" style="display:none;">
-                    <%= render 'pins/form' %>
+                    <%= render :partial => 'pins/form', :locals => { :color => 'green' } %>
                 </div>
             </div> 
 
@@ -101,7 +101,7 @@
             <%= image_tag "redbody.png" %>
             </div>
                  <div id="pininput6" style="display:none;">
-                    <%= render 'pins/form' %>
+                    <%= render :partial => 'pins/form', :locals => { :color => 'white' } %>
                 </div>
             </div>
 
@@ -171,6 +171,7 @@ containment: $('.span8'),
             beforeSend: function (xhr) { xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')) },
             data: {
                 pin: {
+                    color: $(this).attr('rel'),
                     coordinate_x: $(this).closest('.ui-draggable').offset().left,
                     coordinate_y: $(this).closest('.ui-draggable').offset().top,
                     description: $(this).find('#pin_description').val()

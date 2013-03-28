@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130314205839) do
+ActiveRecord::Schema.define(:version => 20130327203213) do
 
   create_table "dolls", :force => true do |t|
     t.string   "name"
@@ -25,8 +25,18 @@ ActiveRecord::Schema.define(:version => 20130314205839) do
 
   add_index "dolls", ["user_id"], :name => "index_dolls_on_user_id"
 
-# Could not dump table "pins" because of following StandardError
-#   Unknown type 'array' for column 'coordinates'
+  create_table "pins", :force => true do |t|
+    t.string   "description"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "user_id"
+    t.integer  "doll_id"
+    t.float    "coordinate_x"
+    t.float    "coordinate_y"
+    t.string   "color"
+  end
+
+  add_index "pins", ["user_id"], :name => "index_pins_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

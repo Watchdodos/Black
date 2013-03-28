@@ -14,6 +14,7 @@ end
   # GET /dolls/1
   # GET /dolls/1.json
   def show
+    @page = 'doll'
     @doll = Doll.find(params[:id])
     @pin = Pin.new
 
