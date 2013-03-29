@@ -22,6 +22,7 @@ group :assets do
   gem 'google-analytics-rails'
   gem 'sunspot_rails'
   gem 'sunspot_solr'
+  gem "wuparty", "~> 1.2.3"
   
   gem 'uglifier', '>= 1.0.3'
 end

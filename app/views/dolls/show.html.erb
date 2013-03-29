@@ -29,8 +29,10 @@
             <div id='pins'>
                 <% @doll.pins.each do |pin| %>
                     <div class='pin <%= pin.color %>' style='position: absolute; top: <%= pin.coordinate_y %>px; left: <%= pin.coordinate_x %>px;'>
+                        <div class="pwrap">
                         <span><%= pin.coordinate_x %>, <%= pin.coordinate_y %></span>
                         <p><%= pin.description %></p>
+                        </div>
                     </div>
                 <% end %>
             </div>
@@ -41,9 +43,7 @@
 		<h5><%= @doll.city %> :: <%= @doll.state %></h5>
 		<h6><%= @doll.tag %></h6>
         <div id='doll_id'><%= @doll.id.to_s %></div>
-		<%= link_to 'Edit', edit_doll_path(@doll) %> |
-		<%= link_to 'Back', dolls_path %>
-		</div>
+        </div>
 	</div>
 
 <% if user_signed_in? %>
@@ -461,6 +461,7 @@ containment: $('.span8'),
     <div class="span4">
         <div class="pinboxlo">     
         </div>
+        <!-- 
         <div class="dollsignup">
         <div class="well">
             <h1>Sign up </h1>
@@ -487,6 +488,6 @@ containment: $('.span8'),
 <% end %>
 
 
-<!-- Shhh nothing is in this part.... walk away...slowly...thats right..  
+Shhh nothing is in this part.... walk away...slowly...thats right..  
 	No shhh shh shh. go.
 	-in the voice of Kristen Schaal-

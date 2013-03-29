@@ -52,6 +52,9 @@ GEM
       multi_json (~> 1.0)
     google-analytics-rails (0.0.4)
     hike (1.2.1)
+    httparty (0.10.2)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     i18n (0.6.1)
     journey (1.0.4)
     jquery-rails (2.2.0)
@@ -64,6 +67,8 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.20.1)
     multi_json (1.5.0)
+    multi_xml (0.5.3)
+    multipart-post (1.2.0)
     nokogiri (1.5.8)
     orm_adapter (0.4.0)
     pg (0.14.1)
@@ -128,6 +133,10 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     warden (1.2.1)
       rack (>= 1.0)
+    wuparty (1.2.3)
+      httparty (>= 0.6.1)
+      mime-types (>= 1.16)
+      multipart-post (>= 1.0.1)
 
 PLATFORMS
   ruby
@@ -147,3 +156,4 @@ DEPENDENCIES
   sunspot_rails
   sunspot_solr
   uglifier (>= 1.0.3)
+  wuparty (~> 1.2.3)

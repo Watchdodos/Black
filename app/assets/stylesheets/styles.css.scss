@@ -635,6 +635,12 @@ h6{margin-top: -16px;}
   left: 0px;
 }
 
+#homepins{
+  position: relative;
+  top: -10px;
+  left: 0px;
+}
+
 /* Pinbox */
 .pinboxli{
   height: 220px;
@@ -665,14 +671,21 @@ h6{margin-top: -16px;}
   position: absolute;
   span{
     display: none;
-
   }
+
+
+
   p{
     color: #f00;
-    width: 242px;
+    overflow: none;
     display: none;
+    z-index: 10;
   }
 }
+
+
+
+
 
 .pin.red {
   background-image: url('pinsetred.png');
@@ -702,6 +715,7 @@ h6{margin-top: -16px;}
 
     p{
     display:inline-block;
+    overflow: hidden;
     width: 242px;
     color: #fff;
     position: relative;
