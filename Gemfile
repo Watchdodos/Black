@@ -19,7 +19,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'bootstrap-sass', '~> 2.2.2.0'
   gem 'bootstrap-colorpicker-rails'
-  gem 'google-analytics-rails'
+  # gem 'google-analytics-rails'
   gem 'sunspot_rails'
   gem 'sunspot_solr'
   gem "wuparty", "~> 1.2.3"
