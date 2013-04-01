@@ -55,7 +55,7 @@ Black::Application.configure do
   # config.threadsafe!
 
 # Google Analytics 
-# GA.tracker = "UA-39287134-1"
+GA.tracker = "UA-39287134-1"
 
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
