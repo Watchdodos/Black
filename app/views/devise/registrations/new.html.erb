@@ -3,10 +3,37 @@
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
 <%= f.error_notification %>
 
-  <%= f.input :name, :placeholder => 'Anonymous' %>
+  <%= f.input :username, :placeholder => 'Anonymous' %>
   <%= f.input :email %>
   <%= f.input :password %>
   <%= f.input :password_confirmation %>
+
+  <div class='control-group'>
+    <label for='first_name' class='control-label'>First Name</label>
+    
+    <div class='controls'>
+      <input type='text' name='first_name' id='first_name' />
+    </div>
+  </div>
+
+  <div class='control-group'>
+    <label for='last_name' class='control-label'>Last Name</label>
+    
+    <div class='controls'>
+      <input type='text' name='last_name' id='last_name' />
+    </div>
+  </div>
+
+  <div class='control-group'>
+  	<label for='color' class='control-label'>Color Choice</label>
+	  
+	  <div class='controls'>
+	  	<select name='color' id='color'>
+	  		<option value='black'>Black
+	  		<option value='blue'>Blue
+	  	</select>
+	  </div>
+  </div>
 
 
  <div id="wufoo-z7x3p3">

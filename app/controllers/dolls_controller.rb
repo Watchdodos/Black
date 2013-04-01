@@ -4,6 +4,8 @@ class DollsController < ApplicationController
   # GET /dolls
   # GET /dolls.json
   def index
+    @current_user = current_user
+
     search_term = params[:search]
     @dolls = Doll.search do
       query { string search_term }
@@ -82,9 +84,5 @@ class DollsController < ApplicationController
       format.html { redirect_to dolls_url }
       format.json { head :no_content }
     end
-  end
-
-  def search
-    dolls = Doll.search params[:search]
   end
 end
