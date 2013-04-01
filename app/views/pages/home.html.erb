@@ -9,12 +9,12 @@
 	<div id="slider" class="carousel slide">
         <div class="carousel-inner">
           <div class="item active">
-            <a href="./lifestyle.html">
+            <a href="./dolls/new">
             <%= image_tag "logo_slider.png" %>
             </a>
             <div class="carousel-caption">
               <p>Dolls With Souls: You have the freedom</p>
-              <p><a href="./lifestyle.html">Freedom of shoving any soul of your choosing into a little doll's body.</a></p>
+              <p><%= link_to "Freedom of shoving any soul of your choosing into a little doll's body.", new_doll_path %></p>
             </div>
           </div>
           <div class="item">
@@ -146,9 +146,9 @@
 		</div>
 	</div>
 </div>
+  <%= render 'layouts/footer' %> 
 
 </div>
-	
 
 
 
