@@ -1,4 +1,7 @@
 class Doll < ActiveRecord::Base
+	include Tire::Model::Search
+	include Tire::Model::Callbacks
+	
   attr_accessible :city, :name, :state, :tag
 
  validates :name, :city, presence: true
@@ -8,8 +11,6 @@ belongs_to :user
 
 validates :user_id, presence: true
 
-searchable do
-  text :city, :name, :state, :tag
-  end
+index_name INDEX_NAME
 
 end

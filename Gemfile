@@ -5,8 +5,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
 gem "wuparty", "~> 1.2.3"
-gem 'sunspot_rails'
-gem 'sunspot_solr'
+gem 'tire'
 
 
 group :production do
