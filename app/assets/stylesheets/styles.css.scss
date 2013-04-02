@@ -396,38 +396,6 @@ left:35px;
 }
 
 
-div.findus div.row div.span1{
-  height: 65px;
-}
-
-.dollsociall{
-  width: 65px;
-height: 72px;
-.icon{
-width: 65px;
-height: 72px;
-
-  background-image: url(fbsocial.png);
-    box-shadow: 1px 1px 5px #000;
-
-  }
-}
-
-.dollsociall{
-  width: 65px;
-height: 72px;
-  background-image: url(fbsocialh.png);
-.icon:hover{
-width: 65px;
-height: 72px;
-position: relative;
-  background-image: url(fbsocialh.png);
-    box-shadow: 1px 1px 5px #000;
-
-  }
-}
-
-
 
 .homesocialc{
    width: 65px;
@@ -472,6 +440,102 @@ div.well div.findus div.row{
   left: 19px;
 }
 
+
+
+
+div.findus div.row div.span1{
+  height: 65px;
+}
+
+.dollsociall{
+  width: 65px;
+height: 72px;
+.icon{
+width: 65px;
+height: 72px;
+
+  background-image: url(fbsocial.png);
+    box-shadow: 1px 1px 5px #000;
+
+  }
+}
+
+.dollsociall{
+  width: 65px;
+height: 72px;
+  background-image: url(fbsocialh.png);
+.icon:hover{
+width: 65px;
+height: 72px;
+position: relative;
+  background-image: url(fbsocialh.png);
+    box-shadow: 1px 1px 5px #000;
+
+  }
+}
+
+
+
+
+
+
+.dollsocialc{
+  width: 65px;
+height: 72px;
+.icon{
+width: 65px;
+height: 72px;
+
+  background-image: url(rgsocial.png);
+    box-shadow: 1px 1px 5px #000;
+
+  }
+}
+
+.dollsocialc{
+  width: 65px;
+height: 72px;
+  background-image: url(rgsocialh.png);
+.icon:hover{
+width: 65px;
+height: 72px;
+position: relative;
+  background-image: url(rgsocialh.png);
+    box-shadow: 1px 1px 5px #000;
+
+  }
+}
+
+
+
+
+
+.dollsocialr{
+  width: 65px;
+height: 72px;
+.icon{
+width: 65px;
+height: 72px;
+
+  background-image: url(twsocial.png);
+    box-shadow: 1px 1px 5px #000;
+
+  }
+}
+
+.dollsocialr{
+  width: 65px;
+height: 72px;
+  background-image: url(twsocialh.png);
+.icon:hover{
+width: 65px;
+height: 72px;
+position: relative;
+  background-image: url(twsocialh.png);
+    box-shadow: 1px 1px 5px #000;
+
+  }
+}
 
 
 
@@ -1108,7 +1172,11 @@ h6{margin-top: -16px;}
     border-color: rgba(50, 50, 50, 0.5);
   }
   h1{
+    color: #A50605;
     margin-top: 0px;
+  }
+  h5{
+   color: #7A7A7A;
   }
 }
 
