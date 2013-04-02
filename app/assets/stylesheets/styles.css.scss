@@ -441,9 +441,19 @@ div.well div.findus div.row{
 }
 
 
+div.well div.findus-li div.row{
+  position: relative;
+  top: 0px;
+  left: 19px;
+}
+
 
 
 div.findus div.row div.span1{
+  height: 65px;
+}
+
+div.findus-li div.row div.span1{
   height: 65px;
 }
 
@@ -1193,6 +1203,38 @@ h6{margin-top: -16px;}
     background-color: rgba(50, 50, 50, 0.5);
     border-color: rgba(50, 50, 50, 0.5);
 
+}
+
+
+
+
+
+.dollsignup-li{
+  margin-top: 240px;
+  text-align: center;
+  .well{
+ background-color: rgba(50, 50, 50, 0.2);
+    border-color: rgba(50, 50, 50, 0.2);
+    position: relative;
+  top: 320px;
+  }
+  h1{
+    color: #A50605;
+    margin-top: 0px;
+  }
+  h2{
+    font-size: 35.5px;
+    color: #630803;
+    font-weight: 400;
+    margin-top: 0px; 
+  }
+  h5{
+   color: #7A7A7A;
+  }
+}
+
+.findus-li{
+  margin-top: 0px;
 }
 
 
