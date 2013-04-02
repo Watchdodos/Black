@@ -558,6 +558,9 @@ background-image: url('nav.png');
 	background-color: #00ff00;
 	margin:0px auto;
 	width:196px;		
+  background-image: url('head.png');
+
+  
 }
 
 #mid {
@@ -578,7 +581,13 @@ background-image: url('nav.png');
 	background-color: #00ff00;
 	display:inline-block;
 	margin:0px -4px;
-	position:relative;		
+	position:relative;
+  background-image: url('shirt-test.png');
+  width: 196px;
+  height: 196px;
+
+
+  
 }
 
 #rarm {
@@ -687,7 +696,7 @@ h6{margin-top: -16px;}
     position: fixed;
     right: 100px;
     z-index: 1030;
-    width: 100%;
+    width: 98%;
     background-color: transparent;
 
 
