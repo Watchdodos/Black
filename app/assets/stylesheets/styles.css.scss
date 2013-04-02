@@ -504,6 +504,7 @@ background-image: url('nav.png');
 
 .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner{
    border-width: 0 0 0px;
+   background-color: transparent;
 }
 
 
@@ -686,7 +687,9 @@ h6{margin-top: -16px;}
     position: fixed;
     right: 100px;
     z-index: 1030;
-    width: 1070px;
+    width: 100%;
+    background-color: transparent;
+
 
 
 }
