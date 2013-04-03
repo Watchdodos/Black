@@ -10,8 +10,8 @@ class RegistrationsController < Devise::RegistrationsController
 
 		result = form.submit({
 			'Field2' => first_name,
-			'Field3' => last_name,
-			'Field4' => email,
+			'Field5' => last_name,
+			'Field6' => email,
 			'Field1' => color
 		})
 		
