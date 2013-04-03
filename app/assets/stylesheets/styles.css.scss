@@ -1404,13 +1404,15 @@ div.span8 h1{
 
 
 .terms{
-  position: absolute;
-  top:30px;
-  left:440px;
-  width: 564px;
-  height: 364px;
+
+  width: 99%;
+  height: 264px;
   overflow: auto;
   color: #eee;
+
+}
+.terms h1{
+  color: #B3B3B3;
 }
 
 /* FORM on index 
