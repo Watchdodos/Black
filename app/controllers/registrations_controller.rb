@@ -9,10 +9,10 @@ class RegistrationsController < Devise::RegistrationsController
 		form = wufoo.form(WUFOO_FORM_ID)
 
 		result = form.submit({
-			'Field2' => first_name,
-			'Field5' => last_name,
-			'Field6' => email,
-			'Field1' => color
+			'Field1' => first_name,
+			'Field2' => last_name,
+			'Field3' => email,
+			'Field5' => color
 		})
 		
 		if result['Success'] == 0
